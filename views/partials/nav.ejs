@@ -3,16 +3,23 @@
   <% } %>
 </head>
 <body>
-  <nav>
-    <% if (user) { %>
+  <% if (user) { %>
+    <nav>
+      <i class="fas fa-plane"></i>
+      <a 
+      href="/meals/new" <%- title === 'Browse All Animals' ? 'class="active"' : '' %>
+    >Browse All Animals</a>
+      <a 
+        href="/meals/new" <%- title === 'Trading Post' ? 'class="active"' : '' %>
+      >Trading Post</a>
+      <a 
+        href="/flights/new" <%- title === 'Safari' ? 'class="active"' : '' %>
+      >Safari</a>
+      <a 
+        href="/flights" <%- title === 'Profile' ? 'class="active"' : '' %>
+      >Profile</a>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
-  </nav>
+    </nav>
+  <% } %>
