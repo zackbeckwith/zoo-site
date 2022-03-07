@@ -13,3 +13,14 @@ const User = mongoose.model('User', userSchema)
 export {
   User
 }
+
+profile: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' },
+}, {
+  timestamps: true,
+})
+
+const User = mongoose.model('User', userSchema)
+
+export {
+  User
+}
