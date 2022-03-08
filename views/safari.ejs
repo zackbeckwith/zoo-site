@@ -1,0 +1,16 @@
+<%- include('./partials/html-head') %>
+<%- include('./partials/nav') %>
+
+<p><%= animal.data.name %></p>
+<img src="<%=animal.data.image_link %>" alt="<%= animal.data.name %>">
+<form action="/zoos" method="POST">
+<input type="hidden" name="name" value="<%= animal.data.name %>">
+<input type="hidden" name="latinName" value="<%= animal.data.latin_name %>">
+<input type="hidden" name="lifespan" value="<%= animal.data.lifespan %>">
+<input type="hidden" name="diet" value="<%= animal.data.diet %>">
+<input type="hidden" name="geoRange" value="<%= animal.data.geo_range %>">
+<input type="hidden" name="image" value="<%= animal.data.image_link %>">
+<button type="submit">Add Animal</button>
+</form>
+
+<%- include('./partials/footer') %>

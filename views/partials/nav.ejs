@@ -1,23 +1,25 @@
-  <% if (!user) { %>
-    <link rel="stylesheet" href="/stylesheets/siwg.css">
-  <% } %>
+<link rel="stylesheet" href="/stylesheets/siwg.css">
+<link rel="stylesheet" href="/stylesheets/nav.css">
 </head>
 <body>
   <% if (user) { %>
     <nav>
       <i class="fas fa-plane"></i>
       <a 
-      href="/meals/new" <%- title === 'Browse All Animals' ? 'class="active"' : '' %>
+      href="/animals" <%- title === 'Browse All Animals' ? 'class="active"' : '' %>
     >Browse All Animals</a>
       <a 
-        href="/meals/new" <%- title === 'Trading Post' ? 'class="active"' : '' %>
+        href="/tradingpost" <%- title === 'Trading Post' ? 'class="active"' : '' %>
       >Trading Post</a>
       <a 
-        href="/flights/new" <%- title === 'Safari' ? 'class="active"' : '' %>
+        href="/zoos" <%- title === 'Safari' ? 'class="active"' : '' %>
       >Safari</a>
       <a 
-        href="/flights" <%- title === 'Profile' ? 'class="active"' : '' %>
+        href="/users/profile" <%- title === 'Profile' ? 'class="active"' : '' %>
       >Profile</a>
+      <img
+      src="<%= user.profile.avatar %>"
+      alt="<%= user.profile.name %> avatar"/>
       <a href="/auth/logout">
         <button type="submit">Logout</button>
       </a>
