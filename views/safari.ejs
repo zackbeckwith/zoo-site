@@ -1,8 +1,6 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
-
-<p><%= animal.data.name %></p>
-<img src="<%=animal.data.image_link %>" alt="<%= animal.data.name %>">
+<link rel="stylesheet" href="/stylesheets/safari.css">
 <form action="/zoos" method="POST">
 <input type="hidden" name="name" value="<%= animal.data.name %>">
 <input type="hidden" name="latinName" value="<%= animal.data.latin_name %>">
@@ -10,7 +8,14 @@
 <input type="hidden" name="diet" value="<%= animal.data.diet %>">
 <input type="hidden" name="geoRange" value="<%= animal.data.geo_range %>">
 <input type="hidden" name="image" value="<%= animal.data.image_link %>">
-<button type="submit">Add Animal</button>
+<div class="card" style="width: 18rem;">
+  <img src="<%=animal.data.image_link %>" class="card-img-top animalpic" alt="<%= animal.data.name %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= animal.data.name %></h5>
+    <p class="card-text"></p>
+    <button type="submit" class="btn btn-primary">Add animal</a>
+  </div>
+</div>
 </form>
 
 <%- include('./partials/footer') %>
