@@ -29,7 +29,17 @@ function animalCreate(req, res) {
 }
 
 function index(req, res) {
-console.log('test')
+  Animal.find({})
+  .then(animals => {
+    res.render('animals/index', {
+      title: 'All Animals',
+      animals,
+  })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/animals/index}`)
+  })
 }
 
 export {

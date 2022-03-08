@@ -1,4 +1,17 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-<p>test</p>
+<link rel="stylesheet" href="/stylesheets/animals/index.css">
+
+<h2>All Animals!</h2>
+<ul>
+  <% animals.forEach(animal => { %>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
+    <div class="card-body">
+      <h5 class="card-title"><%= animal.name %></h5>
+      <p class="card-text"><%= animal.geoRange %></p>
+    </div>
+  </div>
+  <% }) %> 
+</ul>
 <%- include('../partials/footer') %>
