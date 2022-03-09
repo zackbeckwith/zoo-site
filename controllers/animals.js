@@ -45,11 +45,19 @@ function index(req, res) {
 }
 
 function zooShow(req, res) {
-  Profile.find({})
-  .then(zoos => {
+  Profile.findById(req.user.profile._id)
+  .populate({
+    path: 'zoos',
+      populate: {
+        path: 'collectedAnimals'
+      }
+  })
+  .then(profile => {
+    const zoo = profile.zoos.id(req.params.id) 
     res.render('zoos/show', {
       title: 'test',
-      zoos,
+      profile,
+      zoo
     })
   })
 }
