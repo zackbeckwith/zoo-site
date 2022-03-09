@@ -6,4 +6,13 @@
   <button>Create Zoo</button>
 </form>
 
+<ul>
+  <% user.profile.zoos.forEach(zoo => { %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= zoo.name %></h5>
+      </div>
+    </div>
+    <% }) %> 
+</ul>
 <%- include('../partials/footer') %>

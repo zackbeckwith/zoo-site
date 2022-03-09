@@ -49,7 +49,7 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (id, done) {
   User.findById(id)
-  .populate('profile', 'name avatar')
+  .populate('profile')
   .exec(function (err, user) {
     done(err, user)
   })
