@@ -56,7 +56,8 @@ function zooShow(req, res) {
   }
 ])
   .then(profile => {
-    const zoo = profile.zoos.id(req.params.id) 
+    const zoo = profile.zoos.id(req.params.id)
+    // const animalsNotInZoo =  
     res.render('zoos/show', {
       title: 'test',
       profile,
@@ -75,9 +76,6 @@ function addToZoo(req, res) {
       res.redirect(`/zoos/${req.params.zooId}`)
     })
   })
-  //find profile
-  //find zoo
-  //push animal ID
 }
 
 export {
