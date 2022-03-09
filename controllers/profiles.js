@@ -8,7 +8,7 @@ function userProfile(req, res) {
 }
 
 function createZoo(req, res) {
-  console.log(Profile.findById(req.user.profile._id))
+  console.log(req.user.profile._id)
   // .then(profile => {
   //   profile.zoos.push(req.body)
   //   profile.save()

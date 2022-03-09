@@ -6,6 +6,7 @@ const zoosSchema = new Schema({
   name: String,
   collectedAnimals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Animal' }],
 })
+
 const profileSchema = new Schema({
   name: String,
   avatar: String,
