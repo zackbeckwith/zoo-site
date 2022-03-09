@@ -3,7 +3,7 @@
 <h1> <%= zoo.name %> </h1>
 <form action="/animals/addToZoo/<%= zoo._id %>" method="POST">
   <select name="animalId">
-    <% profile.animals.forEach(animal => { %>
+    <% animalsNotInZoo?.forEach(animal => { %>
     <option value="<%= animal._id %>"><%= animal.name %></option>
     <% }) %> 
   </select>
