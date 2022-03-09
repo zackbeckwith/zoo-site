@@ -43,8 +43,13 @@ function index(req, res) {
 }
 
 function zooShow(req, res) {
-  Profile.zoos.findById(req.params.id)
-  console.log(req.params.id)
+  Profile.find({})
+  .then(zoos => {
+    res.render('zoos/show', {
+      title: 'test',
+      zoos,
+    })
+  })
 }
 
 export {

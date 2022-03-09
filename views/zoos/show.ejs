@@ -1,10 +1,10 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-<h2><%= zoo._id %></h2>
+<h2><%= zoos._id %></h2>
 
 <ul>
-  <% user.profile.zoos.forEach(zoo => { %>
+  <% zoos.forEach(zoo => { %>
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><a href="/zoos/<%= zoo._id %>"><%= zoo.name %></h5></a>
