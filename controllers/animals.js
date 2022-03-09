@@ -42,10 +42,18 @@ function index(req, res) {
   })
 }
 
+function zooShow(req, res) {
+  Profile.findById(req.params.id)
+  .then(zoo => {
+    console.log(Profile.findById(req.user.zoo._id))
+  })
+}
+
 export {
   animalSearch,
   animalCreate,
-  index
+  index,
+  zooShow
 }
 
 
