@@ -1,3 +1,9 @@
-a {
-  margin: auto;
+.avatar {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.dropdown-item, .hello {
+  text-align: center;
+  padding: 10px;
 }
