@@ -5,7 +5,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 router.get('/user', isLoggedIn, profilesCtrl.userProfile)
 
-router.post('/user', isLoggedIn, profilesCtrl.createZoo)
+router.post('/createZoo', isLoggedIn, profilesCtrl.createZoo)
 
 export {
   router
