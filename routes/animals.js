@@ -5,6 +5,8 @@ import { isLoggedIn } from '../middleware/middleware.js'
 
 router.get('/', isLoggedIn,  animalsCtrl.index)
 
+router.post('/addToZoo/:zooId', isLoggedIn, animalsCtrl.addToZoo)
+
 export {
   router
 }

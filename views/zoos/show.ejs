@@ -1,20 +1,32 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
-
-<ul>
- <%= zoo.name %>
-  <% zoo.collectedAnimals.forEach(animal => { %>
-    <div class="card" style="width: 18rem;">
-      <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
-      <div class="card-body">
-        <h5 class="card-title"><%= animal.name %></h5>
-        <p class="card-text"><%= animal.latinName %></p>
-        <p class="card-text"><%= animal.geoRange %></p>
-        <p class="card-text"><%= animal.lifespan %></p>
-        <p class="card-text"><%= animal.diet %></p>
-      </div>
-    </div>
+<h1> <%= zoo.name %> </h1>
+<form action="/animals/addToZoo/<%= zoo._id %>" method="POST">
+  <select name="animalId">
+    <% profile.animals.forEach(animal => { %>
+    <option value="<%= animal._id %>"><%= animal.name %></option>
     <% }) %> 
+  </select>
+  <button type="submit" class="btn btn-primary">Add Animal To Zoo</button>
+</form>
+<ul>
+ <% if(!zoo.collectedAnimals.length){ %>
+<h1>There are no animals in this zoo.</h1>
+<% } %> 
+<% zoo.collectedAnimals.forEach(animal => { %>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
+    <div class="card-body">
+      <h5 class="card-title"><%= animal.name %></h5>
+      <p class="card-text"><%= animal.latinName %></p>
+      <p class="card-text"><%= animal.geoRange %></p>
+      <p class="card-text"><%= animal.lifespan %></p>
+      <p class="card-text"><%= animal.diet %></p>
+      <form action="">  <button type="submit" class="btn btn-primary">Delete From Zoo</button>
+      </form>
+    </div>
+  </div>
+  <% }) %> 
 </ul>
 
 <%- include('../partials/footer') %>

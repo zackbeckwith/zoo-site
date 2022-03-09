@@ -46,12 +46,15 @@ function index(req, res) {
 
 function zooShow(req, res) {
   Profile.findById(req.user.profile._id)
-  .populate({
+  .populate([{
     path: 'zoos',
       populate: {
         path: 'collectedAnimals'
-      }
-  })
+      }  
+  }, {
+    path: 'animals',
+  }
+])
   .then(profile => {
     const zoo = profile.zoos.id(req.params.id) 
     res.render('zoos/show', {
@@ -62,11 +65,27 @@ function zooShow(req, res) {
   })
 }
 
+function addToZoo(req, res) {
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    const zoo = profile.zoos.id(req.params.zooId)
+    zoo.collectedAnimals.push(req.body.animalId)
+    profile.save()
+    .then(() => {
+      res.redirect(`/zoos/${req.params.zooId}`)
+    })
+  })
+  //find profile
+  //find zoo
+  //push animal ID
+}
+
 export {
   animalSearch,
   animalCreate,
   index,
-  zooShow
+  zooShow,
+  addToZoo,
 }
 
 
