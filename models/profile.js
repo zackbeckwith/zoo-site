@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const zoosSchema = new Schema({
-  name: String,
+  name: {type: String,
+    required: true},
   collectedAnimals: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Animal' }],
 })
 

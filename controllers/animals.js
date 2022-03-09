@@ -23,6 +23,8 @@ function animalCreate(req, res) {
       profile.save(err => {
         res.redirect('/zoos')
       })
+    }else {
+      res.redirect('/zoos')
     }
   })
   })
