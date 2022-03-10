@@ -2,8 +2,15 @@ import { Animal } from "../models/animal.js"
 import { Profile } from "../models/profile.js"
 
 function userProfile(req, res) {
+  Profile.findById(req.user.profile._id)
+  .populate({
+    path: 'animals',
+  })
+  .then(profile => {
   res.render('profiles/show', {
     title: 'Your Profile',
+    profile
+  })
   })
 }
 

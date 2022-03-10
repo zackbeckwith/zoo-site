@@ -59,7 +59,7 @@ function zooShow(req, res) {
     const zoo = profile.zoos.id(req.params.id)
     const animalsNotInZoo = profile.animals.filter(a => !zoo.collectedAnimals.some(b => b.id===(a.id)))
     res.render('zoos/show', {
-      title: 'test',
+      title: zoo.name,
       profile,
       zoo,
       animalsNotInZoo

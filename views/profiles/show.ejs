@@ -1,20 +1,43 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/animals/index.css">
+<link rel="stylesheet" href="/stylesheets/profiles/show.css">
 
-<form action="/profiles/createZoo" method="POST">
+<h2>Your Zoos</h2>
+<form class ="createzoo" action="/profiles/createZoo" method="POST">
   <input type="text" name="name">Zoo Name</input>
   <button>Create Zoo</button>
 </form>
-
 <ul>
-  <% user.profile.zoos.forEach(zoo => { %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title"><a href="/zoos/<%= zoo._id %>"><%= zoo.name %></h5></a>
+  <section class="container"></section>
+    <% user.profile.zoos.forEach(zoo => { %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/zoos/<%= zoo._id %>"><%= zoo.name %></h5></a>
+        </div>
+        <form method="POST" action="/zoos/<%= zoo._id %>?_method=DELETE""><button type="submit" class="btn btn-primary">Delete Zoo</button>
+        </form>
       </div>
-      <form method="POST" action="/zoos/<%= zoo._id %>?_method=DELETE""><button type="submit" class="btn btn-primary">Delete Zoo</button>
-      </form>
-    </div>
     <% }) %> 
+  </section>
+</ul>
+
+
+<h2>Your Collected Animals</h2>
+<ul>
+  <section class="container">
+    <% profile.animals.forEach(animal => { %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
+        <div class="card-body">
+          <h5 class="card-title"><%= animal.name %></h5>
+          <p class="card-text"><%= animal.latinName %></p>
+          <p class="card-text"><%= animal.geoRange %></p>
+          <p class="card-text"><%= animal.lifespan %></p>
+          <p class="card-text"><%= animal.diet %></p>
+        </div>
+      </div>
+    <% }) %> 
+  </section>
 </ul>
 <%- include('../partials/footer') %>
