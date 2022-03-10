@@ -3,8 +3,10 @@
 
 <h2><strong><a href="https://zoomingle.herokuapp.com/">Visit here!</a></strong></h2>
 
+<h2>What is it?</h2>
 <p>Zoomingle is a web application where you can collect randomly selected animals in a tinder-akin fashion and then assign those animals to zoos of your choosing!</p>
 <hr></hr>
+<h2>What can I do?</h2>
 <p>Users can have unique zoos filled with a variety of creatures that are unlikely to very similar with other users. Eventually, users will be able to trade these animals with others and form unique collections with all their favorite animals to show-off to others!</p>
 <hr></hr>
 <h2>
@@ -35,7 +37,6 @@
 - [ ] Add ability to trade animals with others
 - [ ] More animations and sound effects, overall CSS overhaul
   - [ ] Background effect on login page
-  - [ ] 
 - [ ] Limit users on animals so that animals are more unique to each person.
 - [ ] More zoo customization
   - [ ] Give animals names
