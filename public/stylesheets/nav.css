@@ -10,8 +10,10 @@
 
 .nav-item {
   font-family: 'Cabin Sketch', cursive;
+  padding-right: 25px;
 }
 
 .dropdown-menu {
   text-align: center;
+  border-radius: 5%;
 }
