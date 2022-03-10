@@ -7,7 +7,7 @@ function userProfile(req, res) {
   })
 }
 
-function createZoo(req, res) {
+function create(req, res) {
   Profile.findById(req.user.profile._id)
   .then(profile => {
     profile.zoos.push(req.body)
@@ -24,5 +24,5 @@ function createZoo(req, res) {
 
 export {
   userProfile,
-  createZoo,
+  create,
 }

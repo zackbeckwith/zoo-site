@@ -13,6 +13,9 @@ router.post('/', isLoggedIn, animalsCtrl.animalCreate)
 
 router.delete('/:zooId/:animalId', isLoggedIn, animalsCtrl.delete)
 
+router.delete('/:zooId', isLoggedIn,
+animalsCtrl.deleteZoo)
+
 export {
   router
 }

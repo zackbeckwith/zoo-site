@@ -92,13 +92,29 @@ function deleteAnimal(req,res) {
   })
 }
 
+function deleteZoo(req, res) {
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    profile.zoos.remove(req.params.zooId)
+    profile.save()
+    .then(() => {
+      res.redirect(`/profiles/user`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect(`/profiles/user`)
+    })
+  })
+}
+
 export {
   animalSearch,
   animalCreate,
   index,
   zooShow,
   addToZoo,
-  deleteAnimal as delete
+  deleteAnimal as delete,
+  deleteZoo
 }
 
 
