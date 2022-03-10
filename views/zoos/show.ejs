@@ -1,6 +1,9 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/animals/index.css">
+
 <h1> <%= zoo.name %> </h1>
+<% if(animalsNotInZoo.length > 0){ %>
 <form action="/animals/addToZoo/<%= zoo._id %>" method="POST">
   <select name="animalId">
     <% animalsNotInZoo?.forEach(animal => { %>
@@ -10,9 +13,10 @@
   <button type="submit" class="btn btn-primary">Add Animal To Zoo</button>
 </form>
 <ul>
- <% if(!zoo.collectedAnimals.length){ %>
+  <%}else if(!zoo.collectedAnimals.length){ %>
 <h1>There are no animals in this zoo.</h1>
 <% } %> 
+<section class="container">
 <% zoo.collectedAnimals.forEach(animal => { %>
   <div class="card" style="width: 18rem;">
     <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
@@ -28,5 +32,6 @@
   </div>
   <% }) %> 
 </ul>
+</section>
 
 <%- include('../partials/footer') %>
