@@ -24,10 +24,10 @@
     <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
     <div class="card-body">
       <h5 class="card-title"><%= animal.name %></h5>
-      <p class="card-text"><%= animal.latinName %></p>
-      <p class="card-text"><%= animal.geoRange %></p>
-      <p class="card-text"><%= animal.lifespan %></p>
-      <p class="card-text"><%= animal.diet %></p>
+      <p class="card-text">Latin Name: <%= animal.latinName %></p>
+      <p class="card-text">Geographic Range: <%= animal.geoRange %></p>
+      <p class="card-text">Lifespan: <%= animal.lifespan %></p>
+      <p class="card-text">Diet: <%= animal.diet %></p>
       <% if (zoo.owner.equals(user?.profile._id)){ %>
       <form method="POST" action="/zoos/<%= zoo._id %>/<%= animal._id %>?_method=DELETE">  <button type="submit" class="btn btn-primary">Delete From Zoo</button>
       </form>
