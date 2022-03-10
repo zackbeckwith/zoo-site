@@ -2,6 +2,7 @@
 <%- include('./partials/nav') %>
 <link rel="stylesheet" href="/stylesheets/safari.css">
 
+<h1 class="animate__animated animate__tada">You've encountered a wild animal!</h1>
 <section class="cardcontainer">
   <form action="/zoos" method="POST">
   <input type="hidden" name="name" value="<%= animal.data.name %>">
@@ -10,7 +11,7 @@
   <input type="hidden" name="diet" value="<%= animal.data.diet %>">
   <input type="hidden" name="geoRange" value="<%= animal.data.geo_range %>">
   <input type="hidden" name="image" value="<%= animal.data.image_link %>">
-  <div class="card" style="width: 18rem;">
+  <div class="card animate__animated animate__zoomInDown">
     <img src="<%=animal.data.image_link %>" class="card-img-top animalpic" alt="<%= animal.data.name %>">
     <div class="card-body">
       <h5 class="card-title"><%= animal.data.name %></h5>

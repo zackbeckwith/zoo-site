@@ -5,13 +5,27 @@
 }
 
 .card, .cardcontainer {
-display: flex;
-align-items: center;
-justify-content: center;
+  justify-content: center;
 }
 
+.card {
+  width: 350px;
+  height: 450px;
+}
+
+.card-title {
+  font-size: 2.5rem;
+}
+
+.btn {
+  font-size: 2rem;
+}
+.animalpic {
+  height: 250px;
+  width: 250px;
+}
 .cardcontainer {
-  margin: 100px;
+  margin: 50px;
 }
 
 /* .tinder {

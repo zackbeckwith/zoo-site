@@ -12,7 +12,7 @@
 
   <section class="container">
     <% user.profile.zoos.forEach(zoo => { %>
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="height: 10rem; width: 10rem;"">
         <div class="card-body">
           <h5 class="card-title"><a href="/zoos/<%= zoo._id %>"><%= zoo.name %></h5></a>
         </div>
@@ -30,7 +30,7 @@
 <ul>
   <section class="container">
     <% profile.animals.forEach(animal => { %>
-      <div class="card" style="width: 18rem;">
+      <div class="card userAnimal" style="width: 18rem;">
         <img src="<%= animal.image %>" class="card-img-top animalpic" alt="<%= animal.name %>">
         <div class="card-body">
           <h5 class="card-title"><%= animal.name %></h5>
