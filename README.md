@@ -1,70 +1,45 @@
-# MEN Stack with OAuth Template
+<h1>ZooMingle!</h1>
+<img src="./public/images/preview.png"/>
 
-This is a MEN Stack template that includes OAuth.
+<h2><strong><a href="https://zoomingle.herokuapp.com/">Visit here!</a></strong></h2>
 
-Use this to go build things! 🚀
+<p>Zoomingle is a web application where you can collect randomly selected animals in a tinder-akin fashion and then assign those animals to zoos of your choosing!</p>
+<hr></hr>
+<p>Users can have unique zoos filled with a variety of creatures that are unlikely to very similar with other users. Eventually, users will be able to trade these animals with others and form unique collections with all their favorite animals to show-off to others!</p>
+<hr></hr>
+<h2>
+<a href="https://trello.com/b/M9hHGHsy/zoomingle">Trello Planning</a>
+</h2>
+<hr></hr>
+<h2>Technologies used: 💻</h2> 
+<ul>
+<li>Node.js</li>
+<li>Express</li>
+<li>EJS</li>
+<li>Mongoose</li>
+<li>Passport</li>
+<li>Bootstrap</li>
+<li>Hammer.js</li>
+<li>Font Awesome Icons</li>
+</ul>
+<hr></hr>
+<h2>Credits: 🙌</h2>
+<ul>
+<li>Zoo Animal API used from <a href="https://zoo-animal-api.herokuapp.com/">https://zoo-animal-api.herokuapp.com/</a></li>
+<li><a href="https://codepen.io/RobVermeer/pen/japZpY">Tinder animations by Rob Vermeer</a></li>
+</ul>
+<hr></hr>
+<h2>Planned Icebox Features🧊</h2>
 
-## To Use This Template
-
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
-
-```bash
-git clone https://github.com/SEI-Remote/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
-
-Once you are in the project directory:
-
-```bash
-rm -rf .git
-```
-
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
-
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
-
-Re-initialize a git repository:
-
-```bash
-git init
-```
-Use whatever method you'd like to get your project on GitHub. If you're looking for speed though use the GitHub CLI to create a new project repository on GitHub:
-
-```bash
-gh repo create <name-of-your-app-here> --public --source .
-```
-Check out the docs [here](https://cli.github.com/manual/gh_repo_create) if you want to learn more about this command. 
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CALLBACK=http://localhost:3000/auth/google/oauth2callback
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
-
-Delete this README.md and finally, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+- [ ] Add ability for users to see other user's zoos
+- [ ] Add ability to trade animals with others
+- [ ] More animations and sound effects, overall CSS overhaul
+  - [ ] Background effect on login page
+  - [ ] 
+- [ ] Limit users on animals so that animals are more unique to each person.
+- [ ] More zoo customization
+  - [ ] Give animals names
+  - [ ] Give zoos a profile picture
+  - [ ] Reorganize animals
+  - [ ] Limit animals to only 1 zoo/user
+- [ ] Accessibility features: light/dark mode, mobile responsiveness
