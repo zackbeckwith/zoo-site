@@ -31,14 +31,13 @@
 <li>Zoo Animal API used from <a href="https://zoo-animal-api.herokuapp.com/">https://zoo-animal-api.herokuapp.com/</a></li>
 <li><a href="https://codepen.io/RobVermeer/pen/japZpY">Tinder animations by Rob Vermeer</a></li>
 <li><a href="https://codepen.io/sadness97/pen/mdOXzNW">Falling Animals animation by Sadness</a>
-</ul>
+<li><a href="https://fontawesome.com">Icons from fontawesome.com</a></ul>
 <hr></hr>
 <h2>Planned Icebox Features🧊</h2>
 
 - [ ] Add ability for users to see other user's zoos
 - [ ] Add ability to trade animals with others
 - [ ] More animations and sound effects, overall CSS overhaul
-  - [ ] Background effect on login page
 - [ ] Limit users on animals so that animals are more unique to each person.
 - [ ] More zoo customization
   - [ ] Give animals names
