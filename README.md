@@ -22,6 +22,7 @@
 <li>Passport</li>
 <li>Bootstrap</li>
 <li>Hammer.js</li>
+<li>animate.css</li>
 <li>Font Awesome Icons</li>
 </ul>
 <hr></hr>
@@ -29,6 +30,7 @@
 <ul>
 <li>Zoo Animal API used from <a href="https://zoo-animal-api.herokuapp.com/">https://zoo-animal-api.herokuapp.com/</a></li>
 <li><a href="https://codepen.io/RobVermeer/pen/japZpY">Tinder animations by Rob Vermeer</a></li>
+<li><a href="https://codepen.io/sadness97/pen/mdOXzNW">Falling Animals animation by Sadness</a>
 </ul>
 <hr></hr>
 <h2>Planned Icebox Features🧊</h2>
