@@ -15,6 +15,7 @@ function userProfile(req, res) {
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
   Profile.findById(req.user.profile._id)
   .then(profile => {
     profile.zoos.push(req.body)

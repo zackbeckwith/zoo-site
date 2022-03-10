@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="/stylesheets/animals/index.css">
 
 <h1> <%= zoo.name %> </h1>
+<% if (zoo.owner.equals(user?.profile._id)){ %>
 <% if(animalsNotInZoo.length > 0){ %>
 <form action="/animals/addToZoo/<%= zoo._id %>" method="POST">
   <select name="animalId">
@@ -13,6 +14,7 @@
   <button type="submit" class="btn btn-primary">Add Animal To Zoo</button>
 </form>
 <ul>
+<% } %>
   <%}else if(!zoo.collectedAnimals.length){ %>
 <h1>There are no animals in this zoo.</h1>
 <% } %> 
@@ -26,8 +28,10 @@
       <p class="card-text"><%= animal.geoRange %></p>
       <p class="card-text"><%= animal.lifespan %></p>
       <p class="card-text"><%= animal.diet %></p>
+      <% if (zoo.owner.equals(user?.profile._id)){ %>
       <form method="POST" action="/zoos/<%= zoo._id %>/<%= animal._id %>?_method=DELETE">  <button type="submit" class="btn btn-primary">Delete From Zoo</button>
       </form>
+      <% } %>
     </div>
   </div>
   <% }) %> 
