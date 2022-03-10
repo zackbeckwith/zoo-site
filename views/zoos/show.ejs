@@ -22,7 +22,7 @@
       <p class="card-text"><%= animal.geoRange %></p>
       <p class="card-text"><%= animal.lifespan %></p>
       <p class="card-text"><%= animal.diet %></p>
-      <form action="">  <button type="submit" class="btn btn-primary">Delete From Zoo</button>
+      <form method="POST" action="/zoos/<%= zoo._id %>/<%= animal._id %>?_method=DELETE">  <button type="submit" class="btn btn-primary">Delete From Zoo</button>
       </form>
     </div>
   </div>
