@@ -8,7 +8,9 @@
   <button>Create Zoo</button>
 </form>
 <ul>
-
+  <% if(!user.profile.zoos.length){ %>
+    <h2>You have no zoos!</h2>
+    <% } %> 
   <section class="container">
     <% user.profile.zoos.forEach(zoo => { %>
       <div class="card" style="height: 10rem; width: 10rem;"">
@@ -27,6 +29,9 @@
 
 <h1>Your Collected Animals</h1>
 <ul>
+  <% if(!user.profile.animals.length){ %>
+    <h2>You have no collected animals!</h2>
+    <% } %> 
   <section class="container">
     <% profile.animals.forEach(animal => { %>
       <div class="card userAnimal" style="width: 18rem;">
