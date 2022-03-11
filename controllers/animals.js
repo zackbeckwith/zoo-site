@@ -20,7 +20,6 @@ function animalCreate(req, res) {
       const animal = new Animal(req.body)
       animal.save()
     }else {
-      console.log(found[0].name)
       profile.animals.push(found[0]._id)
       profile.save(err => {
         res.redirect('/zoos')
