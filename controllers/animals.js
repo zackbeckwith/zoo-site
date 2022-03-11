@@ -19,14 +19,13 @@ function animalCreate(req, res) {
     if(!found.length){
       const animal = new Animal(req.body)
       animal.save()
-      profile.animals.push(animal._id)
+    }else {
+      console.log(found[0].name)
+      profile.animals.push(found[0]._id)
       profile.save(err => {
         res.redirect('/zoos')
       })
-    }else {
-      res.redirect('/zoos')
-    }
-  })
+  }})
   })
 }
 
